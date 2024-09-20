@@ -1,7 +1,7 @@
 {
   "name": "eh-bt",
   "version": "0.1.0",
-  "homepage": "https://tdwyer4.github.io/eh-bt",
+  "homepage": "https://tdwyer4.github.io/eh-bt/",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
