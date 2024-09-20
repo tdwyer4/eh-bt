@@ -53,8 +53,6 @@ const timelineItems: TimelineItem[] = [
     image:
       "https://www.executivehomes.com/static/media/OneHundredPlusLayoutsImage.02de467e8933a912438e.jpg",
   },
-
-  // Add more events as needed
 ];
 
 const Timeline: React.FC = () => {
@@ -72,7 +70,9 @@ const Timeline: React.FC = () => {
           {timelineItems.map((item, index) => (
             <motion.div
               key={index}
-              className={styles.timelineItem}
+              className={`${styles.timelineItem} ${
+                selected === index ? styles.active : ""
+              }`} // Conditional active class
               onClick={() => handleClick(index)}
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
@@ -91,7 +91,9 @@ const Timeline: React.FC = () => {
                       animate={{ opacity: 1, height: "auto" }}
                       exit={{ opacity: 0, height: 0 }}
                       transition={{ duration: 0.4 }}
-                    ></motion.div>
+                    >
+                      {/* Optional paragraph content or additional details */}
+                    </motion.div>
                   )}
                 </AnimatePresence>
               </div>

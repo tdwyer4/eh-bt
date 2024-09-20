@@ -1,5 +1,5 @@
-import React, { useRef, useEffect } from "react";
-import { motion, useTransform } from "framer-motion";
+import React, { useRef, useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import "./CardCarousel.scss";
 
 interface CardCarouselProps {
@@ -8,6 +8,7 @@ interface CardCarouselProps {
 
 const CardCarousel: React.FC<CardCarouselProps> = ({ cards }) => {
   const carouselRef = useRef<HTMLDivElement>(null);
+  const [currentCard, setCurrentCard] = useState<number>(0);
 
   useEffect(() => {
     // Ensure the carousel starts from the first card
@@ -16,20 +17,37 @@ const CardCarousel: React.FC<CardCarouselProps> = ({ cards }) => {
     }
   }, []);
 
+  // Function to handle scrolling to the next card when a card is clicked
+  const scrollToCard = (index: number) => {
+    if (carouselRef.current) {
+      const cardWidth = carouselRef.current.scrollWidth / cards.length;
+      const scrollAmount = cardWidth * index;
+
+      carouselRef.current.scrollTo({
+        left: scrollAmount,
+        behavior: "smooth",
+      });
+      setCurrentCard(index);
+    }
+  };
+
   return (
     <div className="carousel-container">
       <motion.div
         className="carousel"
-        drag="x"
-        dragConstraints={{ left: -500, right: 0 }}
-        whileTap={{ cursor: "grabbing" }}
         ref={carouselRef}
         initial={{ opacity: 0, y: 150 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
         {cards.map((card, index) => (
-          <motion.div key={index} className="carousel-card">
+          <motion.div
+            key={index}
+            className={`carousel-card ${currentCard === index ? "active" : ""}`}
+            onClick={() => scrollToCard(index)}
+            whileTap={{ scale: 1 }}
+            transition={{ duration: 0.5, ease: "easeIn" }}
+          >
             <img src={card.image} alt={card.title} className="card-image" />
             <h2 className="card-title">{card.title}</h2>
             <p className="card-description">{card.description}</p>

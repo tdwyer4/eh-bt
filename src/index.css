@@ -13,7 +13,7 @@ html, body {
 }
 
 * {
-  cursor: none;
+  cursor: default;
 }
 
 code {

@@ -34,17 +34,8 @@ const StoreProvider = ({ children }: any) => (
 function PreSoldPage() {
   return (
     <StoreProvider>
-      <div
-        className="App"
-        onClick={hideContextMenu}
-        onMouseMove={(e) => setCursorLocation(e)}
-        onScroll={(e) => setCursorLocation(e)}
-        onMouseDown={(e) => setCursorAppearance(e)}
-        onMouseUp={(e) => setCursorAppearance(e)}
-        onContextMenu={(e) => toggleContextMenu(e)}
-      >
+      <div>
         <Toaster />
-        <Cursor />
         <Manifest />
         <AboutMe />
         {/*<Projects />
