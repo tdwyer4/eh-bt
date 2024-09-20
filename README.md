@@ -19,6 +19,7 @@ This is the sandbox for the Executive Homes Build Timeline webpage.
 
 - Framer Motion
 - Spline 3D
+- Rive
 
 ## Stack
 
