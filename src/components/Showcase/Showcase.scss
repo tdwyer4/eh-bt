@@ -6,8 +6,8 @@
     align-items: center;
     gap: 245px;
     border-radius: 32px;
-    background: rgb(231,80,94);
-    background: linear-gradient(90deg, rgba(231,80,94,1) 0%, rgba(203,88,145,1) 35%, rgba(163,100,220,1) 100%);
+    background: rgb(80, 231, 208);
+    background: linear-gradient(90deg, rgb(68, 123, 135) 0%, rgb(88, 201, 203) 35%, rgb(51, 223, 203) 100%);
 
     @media screen and (max-width: 1420px) {
         gap: 210px;
@@ -258,6 +258,7 @@
             width: 530px;
             height: 260px;
             left: 9px;
+            object-fit: cover;
 
             @media screen and (max-width: 1180px) {
                 height: 195px;

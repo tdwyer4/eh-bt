@@ -148,3 +148,14 @@
         }
     }
 }
+
+.splineTrack {
+    height: calc(100vh + 0px);
+    width: 100%;
+    background: linear-gradient(#74c2cd 0%, #293139 70%);
+}
+
+.splineContainer {
+    background: linear-gradient(#74c2cd 0%, #293139 70%);
+    background-size: 150% 140%;
+}

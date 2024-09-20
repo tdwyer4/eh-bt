@@ -16,13 +16,14 @@
     width: 100vw;
     justify-content: center;
     height: 60vh;
+    background-color: #293139;
 
     @media screen and (max-width: 450px) {
       height: 30vh;
     }
 
     .manifest {
-        background: linear-gradient(300deg,#ffee07,#ff2b6a,#ab4bff,#5ca2ff,#df1700);
+        background: linear-gradient(300deg,#76D5D8,#defeff,#FE7E66,#76D5D8,#426b9b);
         background-size: 360% 360%;
         animation: gradient-animation 30s ease infinite;
         -webkit-background-clip: text;

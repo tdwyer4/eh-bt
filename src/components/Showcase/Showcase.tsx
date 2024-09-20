@@ -7,19 +7,29 @@ export default function Showcase() {
   const [state, dispatch] = useContext(store);
 
   return (
-    <div className="container-showcase">
+    <motion.div
+      className="container-showcase"
+      initial={{ opacity: 0, y: 150 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+    >
       <div className="showcase-left">
         <motion.h3
           initial={{ scale: 0 }}
           whileInView={{ scale: 1 }}
           viewport={{ once: true }}
-        >{state.language === "english" ? "Ein kleiner Einblick in meine Arbeit" : "A little insight into my work"}</motion.h3>
+        >
+          Did you know you can customize your floor plan?
+        </motion.h3>
         <motion.p
           initial={{ scale: 0 }}
           whileInView={{ scale: 1 }}
           viewport={{ once: true }}
         >
-          {state.language === "english" ? "Egal ob aufwendig animierte oder strukturell komplexe Projekte, in meinem Portfolio finden Sie beides - denn ein guter Entwickler sollte beides drauf haben." : "Whether elaborately animated or structurally complex projects, you'll find both in my portfolio - because a good developer should be able to pull off both."}
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
         </motion.p>
       </div>
 
@@ -28,8 +38,17 @@ export default function Showcase() {
           className="screen"
           src={require("../../assets/images/screen5.png")}
         />
-        <iframe className="video" src="https://streamable.com/e/1ehwwr?autoplay=1&nocontrols=1" style={{ border: "none", borderRadius: "2px" }} allow="autoplay"></iframe>
+        <iframe
+          className="video"
+          src="https://www.executivehomes.com/static/media/ForYouDesktopVideo.2d7bfc50fe4b2040cd44.mp4"
+          style={{
+            border: "none",
+            borderRadius: "2px",
+            background: "cover",
+          }}
+          allow="autoplay loop"
+        ></iframe>
       </div>
-    </div>
+    </motion.div>
   );
 }

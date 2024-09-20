@@ -15,19 +15,19 @@ export default function NavBar() {
       transition={{ type: "spring", duration: 0.7 }}
       className={`${state.darkmode ? "dark-nav" : "light-nav"}`}
     >
-      <img
+      {/* <img
         onClick={(e) => scroll("hero")}
         src={require("../../assets/images/icon.jpg")}
         onMouseDown={playAudio}
         onMouseUp={playAudio}
-      />
+      /> */}
       <h3
         className={`first ${state.darkmode ? "dark-anchor" : "light-anchor"}`}
         onClick={(e) => scroll("about-me")}
         onMouseDown={playAudio}
         onMouseUp={playAudio}
       >
-        {state.language === "english" ? "Über mich" : "About Me"}
+        PRE-SOLD
       </h3>
       <h3
         className={`${state.darkmode ? "dark-anchor" : "light-anchor"}`}
@@ -35,7 +35,7 @@ export default function NavBar() {
         onMouseDown={playAudio}
         onMouseUp={playAudio}
       >
-        Portfolio
+        EARLY CONSTRUCTION
       </h3>
       <h3
         className={`${state.darkmode ? "dark-anchor" : "light-anchor"}`}
@@ -43,7 +43,7 @@ export default function NavBar() {
         onMouseDown={playAudio}
         onMouseUp={playAudio}
       >
-        Skills
+        MID-CONSTRUCTION
       </h3>
       <h3
         className={`${state.darkmode ? "dark-anchor" : "light-anchor"}`}
@@ -51,9 +51,9 @@ export default function NavBar() {
         onMouseDown={playAudio}
         onMouseUp={playAudio}
       >
-        {state.language === "english" ? "Lebenslauf" : "Resume"}
+        MOVE-IN READY
       </h3>
-      <button
+      {/* <button
         className="btn-nav"
         type="button"
         onClick={(e) => scroll("contact")}
@@ -61,7 +61,7 @@ export default function NavBar() {
         onMouseUp={playAudio}
       >
         {state.language === "english" ? "Kontakt" : "Contact"}
-      </button>
+      </button> */}
     </motion.nav>
   );
 }

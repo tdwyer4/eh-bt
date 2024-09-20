@@ -1,8 +1,13 @@
-import React, { useReducer, createContext, useEffect, useContext, useRef } from "react";
+import React, {
+  useReducer,
+  createContext,
+  useEffect,
+  useContext,
+  useRef,
+} from "react";
 import "./App.scss";
 import NavBar from "./components/NavBar/NavBar";
 import Hero from "./components/Hero/Hero";
-import LanguageSwitch from "./components/LanguageSwitch/LanguageSwitch";
 import setCursorLocation from "./utils/helpers/setCursorLocation";
 import Cursor from "./components/Cursor/Cursor";
 import setCursorAppearance from "./utils/helpers/setCursorAppearance";
@@ -21,6 +26,7 @@ import Contact from "./components/Contact/Contact";
 import ThemeButton from "./components/ThemeButton/ThemeButton";
 import clickSound from "./assets/audio/click.mp3";
 import playAudio from "./utils/helpers/playAudio";
+import SplineLoader from "./components/Hero/HeroLoad";
 
 // Create store (redux naming convention)
 export const store = createContext<any>(null);
@@ -44,19 +50,7 @@ function App() {
         onMouseUp={(e) => setCursorAppearance(e)}
         onContextMenu={(e) => toggleContextMenu(e)}
       >
-        <Toaster />
-        <Cursor />
-        <NavBar />
-        <ThemeButton />
-        <LanguageSwitch />
-        <ContextMenu />
-        <Hero />
-        <Manifest />
-        <AboutMe />
-        <Projects />
-        <Skills />
-        <Resume />
-        <Contact />
+        <SplineLoader />
       </div>
     </StoreProvider>
   );

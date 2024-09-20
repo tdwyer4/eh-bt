@@ -8,7 +8,7 @@ import EndCards from "../EndCards/EndCards";
 import CardCarousel from "../Carousel/CardCarousel";
 import Timeline from "../Timeline/Timeline";
 
-export default function AboutMe() {
+export default function ECSectionOne() {
   const [state, dispatch] = useContext(store);
 
   const cards = [
@@ -64,7 +64,7 @@ export default function AboutMe() {
         viewport={{ once: true }}
         whileInView={{ opacity: 1, y: 0 }}
       >
-        Welcome to the Pre-Sold Home Building Process
+        Welcome to the Early Construction Home Building Process
       </motion.h3>
       <motion.h1
         className={`heading start ${
