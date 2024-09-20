@@ -7,11 +7,11 @@
 </p>
 </div>
 
-## Short Description
+## EH Build Timeline
 
 This is the sandbox for the Executive Homes Build Timeline webpage.
 
-## 🔴 Company
+## Main Site
 
 🧪 [EH Website](https://executivehomes.com)
 
