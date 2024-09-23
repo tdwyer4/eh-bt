@@ -1,17 +1,10 @@
 import React, { useContext } from "react";
 import "./Manifest.scss";
 import { motion, useTransform } from "framer-motion";
-import { store } from "../../App";
 
 export default function Manifest() {
-  const [state, dispatch] = useContext(store);
-
   return (
-    <div
-      className={`container-manifest ${
-        state.darkmode ? "dark-bg-1" : "light-bg-1"
-      }`}
-    >
+    <div className="container-manifest">
       <motion.a
         className="manifest"
         initial={{ opacity: 0, y: 150 }}

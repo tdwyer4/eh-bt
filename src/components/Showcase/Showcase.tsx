@@ -1,11 +1,8 @@
 import React, { useContext } from "react";
-import { store } from "../../App";
 import { motion } from "framer-motion";
 import "./Showcase.scss";
 
 export default function Showcase() {
-  const [state, dispatch] = useContext(store);
-
   return (
     <motion.div
       className="container-showcase"

@@ -1,23 +1,15 @@
 import React, { useContext, useRef } from "react";
-import { store } from "../../App";
 import { motion } from "framer-motion";
 import "./IntroCards.scss";
 
 export default function IntroCards() {
-  const [state, dispatch] = useContext(store);
   const scrollRef = useRef(null);
 
   return (
     <div className="container-intro">
-      <section
-        className={`left-intro big-card ${
-          state.darkmode ? "dark-card" : "light-card"
-        }`}
-      >
-        <h3 className={`${state.darkmode ? "dark-heading" : "light-heading"}`}>
-          Why choose Executive?
-        </h3>
-        <p className={`${state.darkmode ? "dark-eyebrow" : "light-eyebrow"}`}>
+      <section className={`left-intro big-card`}>
+        <h3 className="">Why choose Executive?</h3>
+        <p className="">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -30,9 +22,7 @@ export default function IntroCards() {
 
       <section className="right-intro" ref={scrollRef}>
         <motion.div
-          className={`small-card ${
-            state.darkmode ? "dark-card" : "light-card"
-          }`}
+          className={`small-card light-card`}
           initial={{ scale: 0 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
@@ -41,17 +31,11 @@ export default function IntroCards() {
             <h3 className="num green">Stat 1</h3>
             <h2 className="sign green-sign"></h2>
           </div>
-          <h4
-            className={`${state.darkmode ? "dark-eyebrow" : "light-eyebrow"}`}
-          >
-            Explanation
-          </h4>
+          <h4 className="">Explanation</h4>
         </motion.div>
 
         <motion.div
-          className={`small-card ${
-            state.darkmode ? "dark-card" : "light-card"
-          }`}
+          className={`small-card light-card`}
           initial={{ scale: 0 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.3 }}
@@ -60,17 +44,11 @@ export default function IntroCards() {
           <div className="card-top">
             <h2 className="num place blue">Stat 2</h2>
           </div>
-          <h4
-            className={`${state.darkmode ? "dark-eyebrow" : "light-eyebrow"}`}
-          >
-            Explanation
-          </h4>
+          <h4 className="">Explanation</h4>
         </motion.div>
 
         <motion.div
-          className={`small-card ${
-            state.darkmode ? "dark-card" : "light-card"
-          }`}
+          className={`small-card light-card`}
           initial={{ scale: 0 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
@@ -79,17 +57,11 @@ export default function IntroCards() {
             <h2 className="num purple">Stat 3</h2>
             <h2 className="sign purple-sign"></h2>
           </div>
-          <h4
-            className={`${state.darkmode ? "dark-eyebrow" : "light-eyebrow"}`}
-          >
-            Explanation
-          </h4>
+          <h4 className="light-eyebrow">Explanation</h4>
         </motion.div>
 
         <motion.div
-          className={`small-card ${
-            state.darkmode ? "dark-card" : "light-card"
-          }`}
+          className={`small-card light-card`}
           initial={{ scale: 0 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.3 }}
@@ -99,11 +71,7 @@ export default function IntroCards() {
             <h2 className="num red">Stat 4</h2>
             <h2 className="sign percent red-sign"></h2>
           </div>
-          <h4
-            className={`${state.darkmode ? "dark-eyebrow" : "light-eyebrow"}`}
-          >
-            Explanation
-          </h4>
+          <h4 className="">Explanation</h4>
         </motion.div>
       </section>
     </div>

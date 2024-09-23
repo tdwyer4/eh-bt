@@ -1,13 +1,12 @@
 import React, { useContext } from "react";
-import { store } from "../../App";
 import { motion } from "framer-motion";
 import { ReactComponent as Dark } from "../../assets/images/dark.svg";
 import { ReactComponent as Light } from "../../assets/images/light.svg";
 import "./ThemeButton.scss";
 import playAudio from "../../utils/helpers/playAudio";
 
-export default function ThemeButton() {
-  const [state, dispatch] = useContext(store);
+{
+  /* export default function ThemeButton() {
 
   const toggleTheme = () => {
     dispatch({
@@ -37,4 +36,5 @@ export default function ThemeButton() {
         : "Turn off lights"}</h4>
     </motion.button>
   );
+} */
 }

@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import { store } from "../../App";
 import { motion } from "framer-motion";
 import returnTabName from "../../utils/helpers/returnTabName";
 import Image from "../Image/Image";
@@ -11,17 +10,28 @@ export interface SkillTabProps {
 
 export default function SkillTab(props: SkillTabProps) {
   const { topic } = props;
-  const [state, dispatch] = useContext(store);
 
   return (
     <motion.div
-      className={`skill-tab-container ${state.darkmode ? "dark-card" : "light-card"}`}
+      className={`skill-tab-container light-card`}
       initial={{ scale: 0 }}
       whileInView={{ scale: 1 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.6, type: "spring", bounce: 0.4, delay: topic === "libraries" ? 0.35 : topic === "prototyping" ? 0.35 : topic === "code" ? 0.65 : 0.05 }}
+      transition={{
+        duration: 0.6,
+        type: "spring",
+        bounce: 0.4,
+        delay:
+          topic === "libraries"
+            ? 0.35
+            : topic === "prototyping"
+            ? 0.35
+            : topic === "code"
+            ? 0.65
+            : 0.05,
+      }}
     >
-      <h3 className={`head ${state.darkmode ? "white" : ""}`}>{returnTabName(topic, state.language)}</h3>
+      <h3 className={`head white`}></h3>
       {topic === "languages" ? (
         <div className="skill-tab-list languages">
           <Image source="typescript" name="TypeScript" />
@@ -35,7 +45,7 @@ export default function SkillTab(props: SkillTabProps) {
       {topic === "frameworks" ? (
         <div className="skill-tab-list">
           <Image source="react" name="React" />
-          <Image source={state.darkmode ? "next_2" : "next"} name="Next.js" />
+          <Image source={"next"} name="Next.js" />
           <Image source="tailwind" name="TailwindCSS" />
         </div>
       ) : null}

@@ -4,23 +4,23 @@
   "homepage": "https://tdwyer4.github.io/eh-bt/",
   "private": true,
   "dependencies": {
-    "@emailjs/browser": "^3.10.0",
+    "@emailjs/browser": "^4.4.1",
     "@splinetool/react-spline": "^4.0.0",
-    "@splinetool/runtime": "^1.9.26",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
-    "@types/node": "^16.18.11",
-    "@types/react": "^18.0.26",
-    "@types/react-dom": "^18.0.10",
-    "framer-motion": "^8.1.8",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-hot-toast": "^2.4.0",
+    "@splinetool/runtime": "^1.9.27",
+    "@testing-library/jest-dom": "^6.5.0",
+    "@testing-library/react": "^16.0.1",
+    "@testing-library/user-event": "^14.5.2",
+    "@types/jest": "^29.5.13",
+    "@types/node": "^22.5.5",
+    "@types/react": "^18.3.8",
+    "@types/react-dom": "^18.3.0",
+    "framer-motion": "^11.5.6",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-hot-toast": "^2.4.1",
     "react-scripts": "5.0.1",
-    "sass": "^1.78.0",
-    "typescript": "^4.9.4",
+    "sass": "^1.79.3",
+    "typescript": "^5.6.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -50,6 +50,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^4.0.0"
+    "gh-pages": "^6.1.1"
   }
 }

@@ -1,13 +1,6 @@
-import React, { useContext } from 'react';
-import { store } from '../../App';
-import './Cursor.scss';
+import React, { useContext } from "react";
+import "./Cursor.scss";
 
-export default function Cursor () {
-  const [state, dispatch] = useContext(store);
-
-  return (
-    <div className={`cursor ${state.darkmode ? "dark-cursor" : "light-cursor"}`} id="cursor">
-
-    </div>
-  );
+export default function Cursor() {
+  return <div className="cursor" id="cursor"></div>;
 }

@@ -1,11 +1,10 @@
 import React, { useContext, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import "./LanguageSwitch.scss";
-import { store } from "../../App";
 import playAudio from "../../utils/helpers/playAudio";
 
-export default function LanguageSwitch() {
-  const [state, dispatch] = useContext(store);
+{
+  /* export default function LanguageSwitch() {
   const [time, setTime] = useState(new Date().valueOf());
   const [renderAmount, setRenderAmount] = useState(0);
 
@@ -52,4 +51,5 @@ export default function LanguageSwitch() {
       Translate to {state.language === "english" ? "English" : "German"}
     </motion.button>
   );
+} */
 }

@@ -1,14 +1,11 @@
-const setCursorLocation = (e: any) => {
-    let x = e.clientX;
-    let y = e.clientY;
-    let cursor = document.getElementById('cursor');
-    if (y <= 5) {
-        cursor?.classList.add('disappear');
+function setCursorLocation() {
+    const element = document.getElementById('your-element-id'); // Use your actual element identifier
+    if (element) { // Check if element is not null
+      element.style.cursor = 'pointer'; // Example action
     } else {
-        cursor?.classList.remove('disappear');
+      console.error('Element not found');
     }
-    cursor!.style.left = `${x}px`;
-    cursor!.style.top = `${y}px`;
-}
+  }
+  
 
 export default setCursorLocation;

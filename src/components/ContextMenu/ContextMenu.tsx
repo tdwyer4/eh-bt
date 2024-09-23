@@ -6,10 +6,10 @@ import { ReactComponent as GitHub } from "../../assets/images/github.svg";
 import { ReactComponent as LinkedIn } from "../../assets/images/linkedin.svg";
 import { ReactComponent as Share } from "../../assets/images/share.svg";
 import toast, { Toaster } from "react-hot-toast";
-import { store } from "../../App";
 import playAudio from "../../utils/helpers/playAudio";
 
-export default function ContextMenu() {
+{
+  /* export default function ContextMenu() {
   const [state, dispatch] = useContext(store);
 
   const copyEmail = () => {
@@ -122,4 +122,5 @@ export default function ContextMenu() {
       </div>
     </div>
   );
+} */
 }

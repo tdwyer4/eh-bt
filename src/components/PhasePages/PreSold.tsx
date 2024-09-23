@@ -18,32 +18,18 @@ import AboutMe from "../AboutMe/AboutMe";
 import Projects from "../Projects/Projects";
 import Skills from "../Skills/Skills";
 import Resume from "../Resume/Resume";
-import Contact from "../Contact/Contact";
 import Hero from "../Hero/Hero";
-
-// Create store (redux naming convention)
-export const store = createContext<any>(null);
-
-// Create store provider to wrap subcomponents in
-const StoreProvider = ({ children }: any) => (
-  <store.Provider value={useReducer(reducer, sampleStore)}>
-    {children}
-  </store.Provider>
-);
 
 function PreSoldPage() {
   return (
-    <StoreProvider>
-      <div>
-        <Toaster />
-        <Manifest />
-        <AboutMe />
-        {/*<Projects />
+    <div>
+      <Toaster />
+      <Manifest />
+      <AboutMe />
+      {/*<Projects />
         <Skills />
-        <Resume />
-        <Contact /> */}
-      </div>
-    </StoreProvider>
+        <Resume /> */}
+    </div>
   );
 }
 

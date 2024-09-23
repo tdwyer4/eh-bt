@@ -1,20 +1,13 @@
 import React, { useContext } from "react";
-import { store } from "../../App";
 import "./Skills.scss";
 import SkillTab from "../SkillTab/SkillTab";
 
 export default function Skills() {
-  const [state, dispatch] = useContext(store);
-
   return (
-    <div className={`skills-container ${state.darkmode ? "dark-bg-2" : "light-bg-2"}`}>
+    <div className={`skills-container light-bg-2`}>
       <div className="anchor" id="skills" />
-      <h3 className={`eyebrow ${state.darkmode ? "dark-eyebrow" : "light-eyebrow"}`}>Skills</h3>
-      <h1 className={`heading ${state.darkmode ? "dark-heading" : "light-heading"}`}>
-        {state.language === "english"
-          ? "Technologien, mit denen ich arbeite."
-          : "Everything I use to turn an idea into reality."}
-      </h1>
+      <h3 className={`eyebrow light-eyebrow`}>Skills</h3>
+      <h1 className={`heading light-heading`}></h1>
 
       <div className="skill-grid">
         <div className="skill-grid-first-row">

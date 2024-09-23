@@ -1,13 +1,11 @@
 import React, { useContext, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import "./ContactForm.scss";
-import { store } from "../../App";
 import toast, { Toaster } from "react-hot-toast";
 import playAudio from "../../utils/helpers/playAudio";
 
 export default function ContactForm() {
   const form = useRef<any>(null);
-  const [state, dispatch] = useContext(store);
   const input1 = useRef(null),
     input2 = useRef(null),
     input3 = useRef(null);
@@ -15,7 +13,8 @@ export default function ContactForm() {
   const sendEmail = (e: any) => {
     e.preventDefault();
 
-    toast.success(
+    {
+      /* toast.success(
       state.language === "english" ? "Nachricht abgeschickt!" : "Message sent!",
       {
         position: "top-left",
@@ -28,8 +27,9 @@ export default function ContactForm() {
           fontSize: "14px",
           backgroundColor: state.darkmode ? "#141414" : ""
         },
-      }
-    );
+      } 
+    ); */
+    }
 
     emailjs
       .sendForm(
@@ -61,46 +61,36 @@ export default function ContactForm() {
     <form
       ref={form}
       onSubmit={sendEmail}
-      className={`contact-form-container ${
-        state.darkmode ? "dark-card" : "light-card"
-      } ${state.darkmode ? "dark-shadow" : "light-shadow"}`}
+      className={`contact-socials-container light-card light-shadow`}
     >
       <div className="input-container">
         <input
           ref={input1}
-          className={`field data ${state.darkmode ? "dark-field" : "light-field"}`}
+          className={`field data light-field`}
           type="text"
           name="user_name"
-          placeholder={state.language === "english" ? "Ihr Name" : "Your name"}
+          placeholder=""
           required
         />
         <input
           ref={input2}
-          className={`field data ${state.darkmode ? "dark-field" : "light-field"}`}
+          className={`field data light-field`}
           type="email"
           name="user_email"
-          placeholder={
-            state.language === "english"
-              ? "Ihre E-Mail-Adresse"
-              : "Your email address"
-          }
+          placeholder=""
           required
         />
       </div>
       <textarea
         ref={input3}
         name="message"
-        placeholder={
-          state.language === "english"
-            ? "Ihre Nachricht an mich"
-            : "Your message for me"
-        }
-        className={`field ${state.darkmode ? "dark-field" : "light-field"}`}
+        placeholder=""
+        className={`field data light-field`}
         required
       />
       <input
         type="submit"
-        value={state.language === "english" ? "Absenden" : "Submit"}
+        value=""
         className="submit"
         onMouseDown={playAudio}
         onMouseUp={playAudio}

@@ -1,33 +1,24 @@
 import React, { useContext } from "react";
 import "./Projects.scss";
 import { motion } from "framer-motion";
-import { store } from "../../App";
 import playAudio from "../../utils/helpers/playAudio";
 
 export default function Projects() {
-  const [state, dispatch] = useContext(store);
-
   return (
-    <div className={`projects-container ${state.darkmode ? "dark-bg-1" : "light-bg-1"}`}>
+    <div className={`projects-container light-bg-1`}>
       <div className="anchor" id="portfolio" />
       <motion.h3
-        className={`eyebrow ${state.darkmode ? "dark-eyebrow" : "light-eyebrow"}`}
+        className={`eyebrow light-eyebrow`}
         initial={{ y: 300 }}
         whileInView={{ y: 0 }}
         viewport={{ once: true }}
-      >
-        {state.language === "english" ? "Projekte" : "Projects"}
-      </motion.h3>
+      ></motion.h3>
       <motion.h1
-        className={`heading ${state.darkmode ? "dark-heading" : "light-heading"}`}
+        className={`heading light-heading`}
         initial={{ y: 250 }}
         whileInView={{ y: 0 }}
         viewport={{ once: true }}
-      >
-        {state.language === "english"
-          ? "Eine kleine Auswahl meiner Projekte."
-          : "A small preview of my projects."}
-      </motion.h1>
+      ></motion.h1>
 
       <div className="project-list">
         <a
@@ -101,9 +92,7 @@ export default function Projects() {
         className="more"
         onMouseDown={playAudio}
         onMouseUp={playAudio}
-      >
-        {state.language === "english" ? "Mehr anzeigen" : "Show More"}
-      </a>
+      ></a>
     </div>
   );
 }

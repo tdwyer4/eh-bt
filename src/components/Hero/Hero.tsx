@@ -1,15 +1,12 @@
 import React, { useContext } from "react";
 import "./Hero.scss";
 import { motion } from "framer-motion";
-import { store } from "../../App";
 import scroll from "../../utils/helpers/scroll";
 import playAudio from "../../utils/helpers/playAudio";
 import Spline from "@splinetool/react-spline";
 import NavBar from "../NavBar/NavBar";
 
 export default function Hero() {
-  const [state, dispatch] = useContext(store);
-
   return (
     <>
       <NavBar />

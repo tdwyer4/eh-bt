@@ -14,45 +14,22 @@ import hideContextMenu from "../../utils/helpers/hideContextMenu";
 import { Toaster } from "react-hot-toast";
 import Cursor from "../Cursor/Cursor";
 import Manifest from "../Manifest/Manifest";
-import ECSectionOne from "../AboutMe/EC-SectionOne";
+import AboutMe from "../AboutMe/AboutMe";
 import Projects from "../Projects/Projects";
 import Skills from "../Skills/Skills";
 import Resume from "../Resume/Resume";
-import Contact from "../Contact/Contact";
 import Hero from "../Hero/Hero";
-
-// Create store (redux naming convention)
-export const store = createContext<any>(null);
-
-// Create store provider to wrap subcomponents in
-const StoreProvider = ({ children }: any) => (
-  <store.Provider value={useReducer(reducer, sampleStore)}>
-    {children}
-  </store.Provider>
-);
 
 function EarlyConPage() {
   return (
-    <StoreProvider>
-      <div
-        className="App"
-        onClick={hideContextMenu}
-        onMouseMove={(e) => setCursorLocation(e)}
-        onScroll={(e) => setCursorLocation(e)}
-        onMouseDown={(e) => setCursorAppearance(e)}
-        onMouseUp={(e) => setCursorAppearance(e)}
-        onContextMenu={(e) => toggleContextMenu(e)}
-      >
-        <Toaster />
-        <Cursor />
-        <Manifest />
-        <ECSectionOne />
-        {/*<Projects />
+    <div>
+      <Toaster />
+      <Manifest />
+      <AboutMe />
+      {/*<Projects />
         <Skills />
-        <Resume />
-        <Contact /> */}
-      </div>
-    </StoreProvider>
+        <Resume /> */}
+    </div>
   );
 }
 

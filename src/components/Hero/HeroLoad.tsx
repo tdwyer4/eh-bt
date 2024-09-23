@@ -2,7 +2,6 @@ import React, { useContext, useRef, useState } from "react";
 import "./Hero.scss";
 import Spline from "@splinetool/react-spline";
 import { motion } from "framer-motion";
-import { store } from "../../App";
 import PreSoldPage from "../PhasePages/PreSold";
 import EarlyConPage from "../PhasePages/EarlyCon";
 
